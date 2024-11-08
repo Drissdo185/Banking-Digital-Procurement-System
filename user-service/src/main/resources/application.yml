@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc: postgresql://localhost:5432/user_service
+    username: root
+    password: root
+    driverClassName: org.postgresql.Driver
+
