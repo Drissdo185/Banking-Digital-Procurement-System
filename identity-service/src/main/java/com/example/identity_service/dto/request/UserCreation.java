@@ -1,4 +1,4 @@
-package com.example.identity_service.dto;
+package com.example.identity_service.dto.request;
 
 import com.example.identity_service.entity.User;
 import jakarta.validation.constraints.NotNull;
@@ -11,7 +11,7 @@ import java.io.Serializable;
  * DTO for {@link User}
  */
 @Value
-public class UserDto implements Serializable {
+public class UserCreation implements Serializable {
     @NotNull
     @Size(max = 50)
     String username;
