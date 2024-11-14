@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: identity-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms_primary_db
+    username: admin
+    password: adminpassword
+    driver-class-name: org.postgresql.Driver
+
+
+

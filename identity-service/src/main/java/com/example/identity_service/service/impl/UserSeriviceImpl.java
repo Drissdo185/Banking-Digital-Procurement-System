@@ -11,6 +11,8 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.expression.ExpressionException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -21,6 +23,8 @@ public class UserSeriviceImpl implements UserSerivice {
 
    public UserResponse createUser(UserCreation request){
        User user = userMapper.toEntity(request);
+       PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
+       user.setPassword(passwordEncoder.encode(request.getPassword()));
        return userMapper.toDto(user);
    }
 

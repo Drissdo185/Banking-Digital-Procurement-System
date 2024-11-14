@@ -34,8 +34,8 @@ public class User {
 
     @Size(max = 255)
     @NotNull
-    @Column(name = "password_hash", nullable = false)
-    String passwordHash;
+    @Column(name = "password", nullable = false)
+    String password;
 
     @Size(max = 50)
     @Column(name = "first_name", length = 50)

@@ -20,7 +20,7 @@ public class UserCreation implements Serializable {
     String email;
     @NotNull
     @Size(max = 255)
-    String passwordHash;
+    String password;
     @Size(max = 50)
     String firstName;
     @Size(max = 50)
